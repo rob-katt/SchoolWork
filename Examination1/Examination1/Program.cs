@@ -1,57 +1,4 @@
 ﻿
-/*
-
-while(true)
-{
-    
-    Console.Clear();
-    Console.WriteLine("1: Circle");
-    Console.WriteLine("2: Trigonometry");
-    Console.WriteLine("0: exit");
-    string Menu = Console.ReadLine();
-
-
-    }
-    
-    if (Menu == "2")
-    {
-        Console.Clear();
-        Console.WriteLine("1: Calculate Hypotenuse");
-        Console.WriteLine("2: Calculate Sine");
-        Console.WriteLine("3: Calculate Cosine");
-        Console.WriteLine("0: Back");
-        Menu = Console.ReadLine();
-        // meny för att räkna ut hypotenusan
-        if (Menu == "1")
-        {
-
-            Console.Write("Input Radius: ");
-            int Radius = int.Parse(Console.ReadLine());
-            Console.WriteLine("Area = " + (Radius * 2 * Math.PI));
-        }
-        // meny för att räkna ut sinus WIP
-        else if (Menu == "2")
-        {
-            Console.Write("Input Number: ");
-            int sin = int.Parse(Console.ReadLine());
-            Console.WriteLine("Sine = " + Math.Sin(sin));
-        }
-        else if (Menu == "3")
-        {
-            Console.Write("Input Number: ");
-            int sin = int.Parse(Console.ReadLine());
-            Console.WriteLine("Cosine = " + Math.Cos(sin));
-        }
-        else if (Menu == "0")
-        {
-            
-        }
-        Console.ReadLine();
-    }
-}
-
-
-*/
 string Menu = "";
 string SubMenu = "";
 while (true)
@@ -126,15 +73,29 @@ while (true)
                     Console.WriteLine("Sine = " + Math.Cos(Cos));
                     Console.ReadKey();
                     break;
-            }
+            } 
             break;
         case "3":
             //temperature
+            double temp1U = 0;
             Console.WriteLine("Select what to convert (c,f,k)");
             string temp1 = Console.ReadLine();
             Console.WriteLine("Select what to convert to (c,f,k)");
             string temp2 = Console.ReadLine();
+            switch (temp1){
+                case "c":
+                    temp1U = double.Parse(Console.ReadLine());
+                    break;
+                case "f":
+                    temp1U = (double.Parse(Console.ReadLine()) - 32) * 5 / 9;
+                    break;
+                case "k":
+                    temp1U = double.Parse(Console.ReadLine())+273.15;
+                    break;
 
+            }
+            Console.WriteLine(temp1U);
+            Console.ReadKey();
             break;
 
 
