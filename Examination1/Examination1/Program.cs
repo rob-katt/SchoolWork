@@ -59,6 +59,7 @@ while (true)
     Console.Clear();
     Console.WriteLine("1: Circle");
     Console.WriteLine("2: Trigonometry");
+    Console.WriteLine("3: Temperature");
     Console.WriteLine("0: exit");
     Menu = Console.ReadLine();
     switch (Menu)
@@ -127,6 +128,16 @@ while (true)
                     break;
             }
             break;
+        case "3":
+            //temperature
+            Console.WriteLine("Select what to convert (c,f,k)");
+            string temp1 = Console.ReadLine();
+            Console.WriteLine("Select what to convert to (c,f,k)");
+            string temp2 = Console.ReadLine();
+
+            break;
+
+
         case "0":
             Environment.Exit(0);
             break;
