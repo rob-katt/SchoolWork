@@ -83,6 +83,7 @@ while (true)
             string temp1 = Console.ReadLine();
             Console.WriteLine("Select what to convert to (c,f,k)");
             string temp2 = Console.ReadLine();
+            Console.WriteLine("");
             double temp1In = double.Parse(Console.ReadLine());
             double temp1Out = temp1In;
             switch (temp1.ToLower())
@@ -110,7 +111,7 @@ while (true)
                     break;
             }
             
-            Console.WriteLine(temp2+ temp2Out);
+            Console.WriteLine(temp2+": "+ temp2Out);
             Console.ReadKey();
             break;
 
