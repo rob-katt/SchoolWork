@@ -77,24 +77,40 @@ while (true)
             break;
         case "3":
             //temperature
-            double temp1U = 0;
+            Console.Clear();
+            double temp2Out = 0;
             Console.WriteLine("Select what to convert (c,f,k)");
             string temp1 = Console.ReadLine();
             Console.WriteLine("Select what to convert to (c,f,k)");
             string temp2 = Console.ReadLine();
-            switch (temp1){
-                case "c":
-                    temp1U = double.Parse(Console.ReadLine());
-                    break;
+            double temp1In = double.Parse(Console.ReadLine());
+            double temp1Out = temp1In;
+            switch (temp1.ToLower())
+            {
+               
+                   
                 case "f":
-                    temp1U = (double.Parse(Console.ReadLine()) - 32) * 5 / 9;
+                    temp1Out = (temp1In - 32) * 5 / 9;
                     break;
                 case "k":
-                    temp1U = double.Parse(Console.ReadLine())+273.15;
+                    temp1Out = temp1In-273.15;
                     break;
 
             }
-            Console.WriteLine(temp1U);
+            switch (temp2.ToLower())
+            {
+                case "c":
+                    temp2Out = temp1Out;
+                    break;
+                case "f":
+                    temp2Out = (temp1Out * 9 / 5) + 32;
+                    break;
+                case "k":
+                    temp2Out = temp1Out + 273.15;
+                    break;
+            }
+            
+            Console.WriteLine(temp2+ temp2Out);
             Console.ReadKey();
             break;
 
