@@ -41,6 +41,7 @@ while (true)
             }
             break;
         case "2":
+            //triogemtri
             Console.Clear();
             Console.WriteLine("1: Calculate Hypotenuse");
             Console.WriteLine("2: Calculate Sine");
@@ -50,6 +51,8 @@ while (true)
             
             switch (SubMenu)
             {
+
+                //petaguras sats
                 case "1":
                     Console.Clear();
                     Console.Write("Input Cathetus 1: ");
@@ -60,6 +63,7 @@ while (true)
                     Console.ReadKey();
                     break;
                 case "2":
+                    //sinus
                     Console.Clear();
                     Console.Write("Input Number: ");
                     int sin = int.Parse(Console.ReadLine());
@@ -67,6 +71,7 @@ while (true)
                     Console.ReadKey();
                     break;
                 case "3":
+                    //cosinus
                     Console.Clear();
                     Console.Write("Input Number: ");
                     int Cos = int.Parse(Console.ReadLine());
@@ -88,7 +93,7 @@ while (true)
             double temp1Out = temp1In;
             switch (temp1.ToLower())
             {
-               
+               //converts the inputed temperature to celcius
                    
                 case "f":
                     temp1Out = (temp1In - 32) * 5 / 9;
@@ -100,6 +105,7 @@ while (true)
             }
             switch (temp2.ToLower())
             {
+                //converts celcius into the selcted temperature
                 case "c":
                     temp2Out = temp1Out;
                     break;
@@ -117,6 +123,7 @@ while (true)
 
 
         case "0":
+            //exit
             Environment.Exit(0);
             break;
         default:
