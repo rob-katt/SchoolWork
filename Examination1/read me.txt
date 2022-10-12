@@ -1,0 +1,24 @@
+1
+Programet har tre funktioner.
+den första funktionen är mattematik inom cirkeln (räkna ut arean och omkrets). du använder den genom att välja vad du vill göra i menyn sen säga radien/diametern och det kommer konverteras till area/omkrets.
+en så är den andra funktionen är triogemetri(sinus, cosinus och hypotenusan). samma som cirklen så väljer du vilken ekvation du vill räkna ut och ger den respektiva inputen.
+den sista funktionen är temperatur(celcius,kelvi,fahrenheit). först så viljer du vilken enhet du vill konvertera ifrån och sän vilken enhet du vill konvertera till.
+
+2 
+själva menyerna är gjorda av switch satser. 
+så en meny är gjord är att den clearar allting först för att hålla consolen läsbar. sen så printas meny valen och sen så är det en readline vilket sän väljer vilken submeny som ska öppnas. där ine finns själva ekvationerna som behöves.
+jag gjorde också en defualt utefall någon ger en invalid input
+hur jag gjorde temperatur var att jag först tog vilka enheter som skulle konverteras och till vad gennom console.readline(). sen oavsät vad så konverterade jag inputen till celcius. sen så konverteras celciusen till den angivna enheten genom en simpel ekvation.
+
+3
+för det mästa dels så gick allting bra. det ända som strulade var github vilket jag till slut fixade genom att instalera github desktop.
+sen på grund av att jag inte ville göra massor av if satser eller metoder för att göra temperatur konverteringen. så spenderade jag 1-2 timmar på att få ett system som går väldigt lätt att lägga till mera temperatur enheter.
+först så gjorde jag menyn med if satser för att jag inte viste hur switch fungerade. men sen så bestämde jag mig för att lära mig det vilken gick hellt okej och tåg bara 5 minuter att bytta allt.
+jag hade ett litet promblem att när koden printade ut något så clearades det direkt pga att nästa meny startar alltid med clear. men det läste jag genom att göra en readkey vilket pausar skriptet tills någon tangent knap är tryckt
+att göra alla andra funktioner gick väldigt bra. det ända jag säga tog lite tid var att söka up ekvationerna vilket inte tog mer än någon minut.
+
+motevering
+
+jag valde switch sats för att jag tycker det blir lätare att göra många menyer och koden blir lite mer optimeserad.
+temperaturen gjordes på det sättet jag gjorde för utefall man skulle ha mer än 3 enheter skulle det bli väldigt många if satser eller metoder. vilket skulle göra koden betydligt mindre optimeserad. (lite som fizzbuzz)
+när vill ha en numer input så tog jag och satte på int.parse så att jag får inputen i int eller i temperaturens fall double.
