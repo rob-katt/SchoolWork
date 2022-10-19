@@ -93,7 +93,7 @@ while (true)
             double temp1Out = temp1In;
             switch (temp1.ToLower())
             {
-               //converts the inputed temperature to celcius
+               //converterar valda enheten till celcius
                    
                 case "f":
                     temp1Out = (temp1In - 32) * 5 / 9;
@@ -105,7 +105,7 @@ while (true)
             }
             switch (temp2.ToLower())
             {
-                //converts celcius into the selcted temperature
+                //converterar den converterade celciusen till den valda enheten
                 case "c":
                     temp2Out = temp1Out;
                     break;
@@ -127,6 +127,7 @@ while (true)
             Environment.Exit(0);
             break;
         default:
+            // om inputen inte matchar ett meny val
             Console.Write("Please enter a valid input");
             Console.ReadKey();
             break;
