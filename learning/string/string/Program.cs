@@ -1,12 +1,11 @@
-﻿
-/*
+﻿/*
 while (true)
 {
     string Name = Console.ReadLine();
     string PirateName = "";
     for (int i = 0; i < Name.Length; i++)
     {
-        char Check = Name[i];
+        char Check = Name.ToLower()[i];
 
         if ((Check == 'a' || Check == 'e' || Check == 'i' || Check == 'o' || Check == 'u' || Check == 'å' || Check == 'ä' || Check == 'ö' || Check == ' ') == false)
         {
@@ -20,14 +19,14 @@ while (true)
         }
 
         Console.Write(PirateName);
-        
+
     }
     Console.WriteLine();
     Console.WriteLine();
 }
-*/
-using System.Data.SqlTypes;
 
+
+*/
 while (true)
 {
     string Name = Console.ReadLine();
@@ -35,8 +34,10 @@ while (true)
 
     for (int i = 0; i < Name.Length; i++)
     {
-        
-        if  (Name.Substring(i, i+2) == (Name[i] + "o"+ Name[i])) {
+        char Check = Name.ToLower()[i];
+
+        if (Name.Substring(i,i+2)== (Check + "o" + Check))
+        {
             Console.WriteLine(Name);
 
         }
