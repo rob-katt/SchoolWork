@@ -7,13 +7,15 @@ while (true)
 {
     Console.WriteLine("1: add player");
     Console.WriteLine("2: list players");
+    Console.WriteLine("3: search for player");
+    Console.WriteLine("4: add player score");
     string menu = Console.ReadLine();
 
     bool menu1 = false;
     switch (menu){
         case "1":
             {
-                Console.WriteLine("playern name:");
+                Console.WriteLine("Playern name:");
                 string player = Console.ReadLine();
                 Console.WriteLine("Player handicap");
                 int handicap = int.Parse(Console.ReadLine());
@@ -47,7 +49,7 @@ while (true)
             }
         case "4":
             {
-
+                Console.WriteLine("add");
                 break;
             }
         case "0":
