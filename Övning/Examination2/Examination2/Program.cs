@@ -9,9 +9,6 @@ using System.Xml.Linq;
 
 while (true)
 {
-    
-
-    
     Console.WriteLine("Enter one rectangle side");
     float rectangle1 = float.Parse(Console.ReadLine());
     Console.WriteLine("Enter the other rectangle side");
@@ -28,19 +25,19 @@ while (true)
 
     Console.WriteLine("rectangles sides are "+ rectangle1+" and "+rectangle2+" with a area of "+area);
 
+    Console.WriteLine("input volume calculator");
+    int volumeCalc = int.Parse(Console.ReadLine());
+    if (volumeCalc>10) { volumeCalc = 10; }
+
     Console.WriteLine("");
     Console.WriteLine("hight | volume");
     Console.WriteLine("--------------------");
-    for (int i = 1; i < 11; i++)
+    for (int i = 1; i < volumeCalc+1; i++)
     {
 
         string space = "     ";
         if (i > 9) { space = "    "; }
-        
 
         Console.WriteLine(i+space+"|" +area*i);
     }
-
-  
-        
 }
