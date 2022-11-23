@@ -2,18 +2,42 @@
 name: Luna carlin
 class: TE22
 info:
-a program
+a program that calculates simple geometry of a rectangle/prism
 */
 using System.Formats.Asn1;
 using System.Xml.Linq;
 
 while (true)
 {
-    Console.WriteLine("Enter one rectangle side");
-    float rectangle1 = float.Parse(Console.ReadLine());
-    Console.WriteLine("Enter the other rectangle side");
-    float rectangle2 = float.Parse(Console.ReadLine());
-    float area = (rectangle1 * rectangle2);
+    float rectangle1 = 0;
+    float rectangle2 = 0;
+    while (true)
+    {
+        Console.WriteLine("Enter one rectangle side");
+        try
+        {
+            rectangle1 = float.Parse(Console.ReadLine());
+            break;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("try again");
+        }
+    }
+    while (true)
+    {
+        Console.WriteLine("Enter the other rectangle side");
+        try
+        {
+            rectangle2 = float.Parse(Console.ReadLine());
+            break;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("try again");
+        }
+    }
+
     if (rectangle1==rectangle2)
     {
         Console.WriteLine("Is square = true");
@@ -23,11 +47,29 @@ while (true)
         Console.WriteLine("Is square = false");
     }
 
+    float area = (rectangle1 * rectangle2);
     Console.WriteLine("rectangles sides are "+ rectangle1+" and "+rectangle2+" with a area of "+area);
 
-    Console.WriteLine("input volume calculator");
-    int volumeCalc = int.Parse(Console.ReadLine());
+    int volumeCalc = 0;
+    while (true)
+    {
+
+        Console.WriteLine("how many volume calculations (1-10)");
+        try
+        {
+            volumeCalc = int.Parse(Console.ReadLine());
+            break;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("try again");
+        }
+    }
+    
     if (volumeCalc>10) { volumeCalc = 10; }
+    else if (volumeCalc<1  ) { volumeCalc = 1; }
+    
+
 
     Console.WriteLine("");
     Console.WriteLine("hight | volume");
@@ -39,5 +81,11 @@ while (true)
         if (i > 9) { space = "    "; }
 
         Console.WriteLine(i+space+"|" +area*i);
+    }
+
+    Console.WriteLine("# to stop");
+    if (Console.ReadLine() == "#")
+    {
+        Environment.Exit(0);
     }
 }
