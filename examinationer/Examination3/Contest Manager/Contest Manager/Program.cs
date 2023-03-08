@@ -53,33 +53,41 @@ switch (menu) {
         }
 }
 */
-/*
-ConsoleKeyInfo cki;
 
 
-Console.WriteLine("Press any combination of CTL, ALT, and SHIFT, and a console key.");
-Console.WriteLine("Press the Escape (Esc) key to quit: \n");
-do
+
+
+
+while(true)
 {
+    string FileTemp = File.ReadAllText("C:\\Temp\\Temp.txt");
+    Console.Write(FileTemp);
+
+    ConsoleKeyInfo cki;
     cki = Console.ReadKey();
-    Console.WriteLine(cki.KeyChar);
-} while (cki.Key != ConsoleKey.Escape);
+    string FileAdd = Convert.ToString(cki.KeyChar);
+    if (cki.Key == ConsoleKey.Backspace)
+    {
+        using (StreamWriter sw = File.CreateText("C:\\Temp\\Temp.txt"))
+        {
+            if (FileTemp.Length != 0)
+            {
+                sw.Write(FileTemp.Remove(FileTemp.Length - 1));
+            }
+           
+        }
+    } 
+    else
+    {
+        using (StreamWriter sw = File.CreateText("C:\\Temp\\Temp.txt"))
+        {
+            sw.Write(FileTemp + FileAdd);
+        }
+    }
+      
 
-*/
 
-
-using (StreamWriter sw = File.CreateText("Temp.txt"))
-{
-    sw.WriteLine("Name: ");
-    sw.WriteLine("Mail: ");
-    sw.WriteLine("Adress: ");
+    Console.Clear();
 }
-Console.ReadKey();
-/*
-string SaveInput = File.ReadAllText("Temp.txt");
-using (StreamWriter sw = File.CreateText("Temp.txt"))
-{
-    sw.WriteLine(SaveInput.Trim());
-    sw.WriteLine(SelectedFile.Trim());
-}
-*/
+
+
