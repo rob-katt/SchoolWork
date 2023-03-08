@@ -1,4 +1,6 @@
-﻿static double points(int D, int T ,int K)
+﻿using System.Runtime.CompilerServices;
+
+static double points(int D, int T ,int K)
 {
     double V = D / T;
     double Dh = (D / K) * 100;
@@ -60,8 +62,53 @@ switch (menu) {
 
 while(true)
 {
-    string FileTemp = File.ReadAllText("C:\\Temp\\Temp.txt");
-    Console.Write(FileTemp);
+    string FileTemp = "";
+    try
+    {
+        string tempLine = "";
+        FileTemp = File.ReadAllText("C:\\Temp\\Temp.txt");
+       
+
+        using (StreamReader sr = new StreamReader("C:\\Temp\\Temp.txt"))
+        {
+            int NumberOfLines = 0;
+            int i =0;
+            List<string> lines = new List<string>();
+            
+            while ((tempLine = sr.ReadLine()) != null|| (sr.Peek == null))
+            {
+                lines.Add(tempLine);
+                NumberOfLines++;
+                if (sr.Peek == null)
+            {
+                Console.WriteLine("end");
+            }
+            }
+            foreach (string line in lines)
+            {
+                if (i < (NumberOfLines+2))
+                {
+                    Console.WriteLine(line);
+
+                }
+                else
+                {
+                    Console.Write(line);
+                }
+                
+
+            } 
+           
+            
+        }
+       
+    }
+    catch
+    {
+    
+    }
+   
+    
 
     ConsoleKeyInfo cki;
     cki = Console.ReadKey();
