@@ -23,11 +23,13 @@ int koeficient = 100;
 Console.WriteLine("---------------------------------------------");
 Console.WriteLine("| Gliding Point Calculator");
 Console.WriteLine("---------------------------------------------");
-Console.WriteLine("| 1: ");
-Console.WriteLine("| 2: ");
+Console.WriteLine("| 1: Read");
+Console.WriteLine("| 2: calculate");
+Console.WriteLine("| 3: show");
 Console.WriteLine("| 0: exit");
 Console.WriteLine("---------------------------------------------");
 string menu = Console.ReadLine();
+
 
 
 
