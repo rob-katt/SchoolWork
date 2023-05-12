@@ -36,7 +36,7 @@ static void DayCalc(List<int> time, List<int> distance, int TrackDistance)
     {
         if (i > TrackDistance)
         {
-            n1++;
+            n2++;
         }
     }
 
@@ -79,12 +79,18 @@ static void DayCalc(List<int> time, List<int> distance, int TrackDistance)
     }
 
 
-    Console.WriteLine("compleated:"+n1);
+    Console.WriteLine("compleated:"+n2);
     Console.WriteLine("attendence: "+N);
     Console.WriteLine("Max D:"+D0);
     Console.WriteLine("max V:"+V0);
 }
+static void PlayerCalc()
+{
+    for (int i =0; i < 10; i++)
+    {
 
+    };
+}
 
 
 
@@ -92,9 +98,10 @@ List<string> name = new List<string>();
 List<int> Time = new List<int>();
 List<int> Distance = new List<int>();
 
-
+name.Add("humannumberOne");
 Time.Add(60);
 Distance.Add(100);
+name.Add("bert");
 Time.Add(80);
 Distance.Add(100);
 Time.Add(55);
